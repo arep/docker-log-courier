@@ -1,5 +1,5 @@
 #!/bin/bash
-git clone --branch stable https://github.com/driskell/log-courier /src/log-courier
+git clone --branch custom https://github.com/arep/log-courier.git /src/log-courier
 cd /src/log-courier
 make
 make gem
@@ -8,7 +8,7 @@ VERSION=$(bin/log-courier -version|grep -o '[0-9\.]*')
 PREFIX=/opt/log-courier
 fpm -s dir -t deb -n log-courier -v $VERSION \
   --description "A lightweight log shipper with Logstash integration" \
-  --url "https://github.com/driskell/log-courier" \
+  --url "https://github.com/arep/log-courier" \
   --force \
   bin/log-courier=$PREFIX/bin/ \
   bin/lc-tlscert=$PREFIX/bin/ \
