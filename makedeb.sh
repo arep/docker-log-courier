@@ -4,7 +4,7 @@ cd /src/log-courier
 make
 make gem
 
-VERSION=$(bin/log-courier -version|grep -o '[0-9\.]*')
+VERSION=$(cat version.txt)
 PREFIX=/opt/log-courier
 fpm -s dir -t deb -n log-courier -v $VERSION \
   --description "A lightweight log shipper with Logstash integration" \
