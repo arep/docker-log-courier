@@ -1,5 +1,5 @@
 #!/bin/bash
-git clone --branch stable https://github.com/driskell/log-courier /src/log-courier
+git clone --branch 1.x https://github.com/driskell/log-courier /src/log-courier
 cd /src/log-courier
 make
 make gem
