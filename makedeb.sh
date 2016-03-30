@@ -2,7 +2,7 @@
 git clone --branch 1.x https://github.com/driskell/log-courier /src/log-courier
 cd /src/log-courier
 make
-export FIX_VERSION=$(bin/log-courier -version|sed s/-/./g)
+export FIX_VERSION=$(bin/log-courier -version|grep -o '1..*'|sed s/-/./g)
 make gem
 
 PREFIX=/opt/log-courier
